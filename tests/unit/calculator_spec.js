@@ -47,6 +47,12 @@ describe('calculator', function () {
     assert.equal(expected, calculator.runningTotal);
   })
 
+  it('can subtract a negative number from initial 0', function(){
+    var expected = 4;
+    calculator.subtract(-4);
+    assert.equal(expected, calculator.runningTotal);
+  })
+
 
 
 });
