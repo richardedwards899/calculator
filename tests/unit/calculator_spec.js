@@ -102,7 +102,7 @@ describe('calculator', function () {
     assert.equal(expected, calculator.runningTotal);
   })
 
-  it('can accept and display one number', function(){
+  it('can accept and display one digit', function(){
     var expected = 3;
     calculator.numberClick(3);
     assert.equal(expected, calculator.runningTotal);
@@ -112,6 +112,14 @@ describe('calculator', function () {
     var expected = 34;
     calculator.numberClick(3);
     calculator.numberClick(4);
+    assert.equal(expected, calculator.runningTotal);
+  })
+
+  it('can add 3 by clicking "3 + +"', function(){
+    var expected = 6;
+    calculator.numberClick(3);
+    calculator.operatorClick('+');
+    calculator.operatorClick('+');
     assert.equal(expected, calculator.runningTotal);
   })
 
