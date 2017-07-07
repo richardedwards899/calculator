@@ -73,6 +73,14 @@ describe('calculator', function () {
     assert.equal(expected, calculator.runningTotal);
   })
 
+  it('can multiply a number by non-zero value twice', function(){
+    var expected = 8;
+    calculator.add(1);
+    calculator.multiply(4);
+    calculator.multiply(2);
+    assert.equal(expected, calculator.runningTotal);
+  })
+
 
 
 });
