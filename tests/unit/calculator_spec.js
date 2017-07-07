@@ -60,6 +60,12 @@ describe('calculator', function () {
     assert.equal(expected, calculator.runningTotal);
   })
 
+  it('can multiply a number by initial 0', function(){
+    var expected = 0;
+    calculator.multiply(2);
+    assert.equal(expected, calculator.runningTotal);
+  })
+
 
 
 });
