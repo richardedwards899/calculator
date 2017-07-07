@@ -13,8 +13,11 @@ describe('calculator', function () {
 
   it('can add a number to initial 0', function(){
     var expected = 4;
-    assert.equal(expected, calculator.add(4));
+    calculator.add(4);
+    assert.equal(expected, calculator.runningTotal);
   })
+
+  
 
 
 });
