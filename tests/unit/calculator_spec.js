@@ -53,6 +53,13 @@ describe('calculator', function () {
     assert.equal(expected, calculator.runningTotal);
   })
 
+  it('can subtract a negative number from non-zero number', function(){
+    var expected = 9;
+    calculator.subtract(-4);
+    calculator.subtract(-5);
+    assert.equal(expected, calculator.runningTotal);
+  })
+
 
 
 });
