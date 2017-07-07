@@ -6,11 +6,7 @@ describe('calculator', function () {
     calculator = new Calculator()
   });
 
-  // write unit tests here in the form of "it should do something..."
-  it('it has a sample test', function(){
-    assert.equal(true, true)
-  })
-
+  
   it('can add a number to initial 0', function(){
     var expected = 4;
     calculator.add(4);
@@ -27,6 +23,14 @@ describe('calculator', function () {
   it('can add a negative number to zero', function(){
     var expected = -2;
     calculator.add(-2);
+    assert.equal(expected, calculator.runningTotal);
+  })
+
+  it('can add a negative number to a negative number', function(){
+    var expected = -5;
+    calculator.add(-2);
+    calculator.add(-3);
+
     assert.equal(expected, calculator.runningTotal);
   })
 
