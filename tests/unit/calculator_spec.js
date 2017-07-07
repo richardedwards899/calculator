@@ -102,6 +102,12 @@ describe('calculator', function () {
     assert.equal(expected, calculator.runningTotal);
   })
 
+  it('can accept and display one number', function(){
+    var expected = 3;
+    calculator.numberClick(3);
+    assert.equal(expected, calculator.runningTotal);
+  })
+
 
 
 });
