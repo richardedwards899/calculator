@@ -17,7 +17,13 @@ describe('calculator', function () {
     assert.equal(expected, calculator.runningTotal);
   })
 
-  
+  it('can add a number to a non-zero value', function(){
+    var expected = 7;
+    calculator.add(3);
+    calculator.add(4);
+    assert.equal(expected, calculator.runningTotal);
+  })
+
 
 
 });

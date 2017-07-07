@@ -9,6 +9,7 @@ Calculator.prototype = {
 
   add: function(number){
     this.runningTotal = parseFloat(this.previousTotal) + parseFloat(number);
+    this.previousTotal = this.runningTotal;
   },
 
   subtract: function(number){
