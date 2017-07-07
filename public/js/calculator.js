@@ -24,6 +24,7 @@ Calculator.prototype = {
 
   divide: function(number){
     this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
+    this.previousTotal = this.runningTotal;
   },
 
   numberClick: function(number) {
