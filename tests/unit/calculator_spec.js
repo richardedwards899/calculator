@@ -24,6 +24,12 @@ describe('calculator', function () {
     assert.equal(expected, calculator.runningTotal);
   })
 
+  it('can add a negative number to zero', function(){
+    var expected = -2;
+    calculator.add(-2);
+    assert.equal(expected, calculator.runningTotal);
+  })
+
 
 
 });
