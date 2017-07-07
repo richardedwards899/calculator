@@ -11,10 +11,9 @@ describe('calculator', function () {
     assert.equal(true, true)
   })
 
-  it('can add two numbers', function(){
+  it('can add a number to initial 0', function(){
     var expected = 4;
-
-    assert.equal(expected, calculator.);
+    assert.equal(expected, calculator.add(4));
   })
 
 
