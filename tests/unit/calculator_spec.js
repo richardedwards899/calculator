@@ -66,6 +66,13 @@ describe('calculator', function () {
     assert.equal(expected, calculator.runningTotal);
   })
 
+  it('can multiply a number by non-zero value', function(){
+    var expected = 4;
+    calculator.add(1);
+    calculator.multiply(4);
+    assert.equal(expected, calculator.runningTotal);
+  })
+
 
 
 });
