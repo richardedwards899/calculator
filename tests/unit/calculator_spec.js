@@ -40,6 +40,13 @@ describe('calculator', function () {
     assert.equal(expected, calculator.runningTotal);
   })
 
+  it('can subtract a number from a non-zero value', function(){
+    var expected = -7;
+    calculator.subtract(3);
+    calculator.subtract(4);
+    assert.equal(expected, calculator.runningTotal);
+  })
+
 
 
 });

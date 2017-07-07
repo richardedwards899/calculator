@@ -14,6 +14,7 @@ Calculator.prototype = {
 
   subtract: function(number){
     this.runningTotal = parseFloat(this.previousTotal) - parseFloat(number);
+    this.previousTotal = this.runningTotal;
   },
 
   multiply: function(number){
