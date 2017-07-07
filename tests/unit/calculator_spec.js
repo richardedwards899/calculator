@@ -81,18 +81,18 @@ describe('calculator', function () {
     assert.equal(expected, calculator.runningTotal);
   })
 
-  it('can divide a number by initial 0', function(){
+  it('can divide 0 by a number', function(){
     var expected = 0;
     calculator.divide(2);
     assert.equal(expected, calculator.runningTotal);
   })
 
-  // it('can multiply a number by non-zero value', function(){
-  //   var expected = 4;
-  //   calculator.add(1);
-  //   calculator.multiply(4);
-  //   assert.equal(expected, calculator.runningTotal);
-  // })
+  it('can divide a non-zero value by number', function(){
+    var expected = 2;
+    calculator.add(10);
+    calculator.divide(5);
+    assert.equal(expected, calculator.runningTotal);
+  })
   //
   // it('can multiply a number by non-zero value twice', function(){
   //   var expected = 8;
