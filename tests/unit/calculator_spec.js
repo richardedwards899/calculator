@@ -6,7 +6,7 @@ describe('calculator', function () {
     calculator = new Calculator()
   });
 
-  
+
   it('can add a number to initial 0', function(){
     var expected = 4;
     calculator.add(4);
@@ -31,6 +31,12 @@ describe('calculator', function () {
     calculator.add(-2);
     calculator.add(-3);
 
+    assert.equal(expected, calculator.runningTotal);
+  })
+
+  it('can subtract a number from initial 0', function(){
+    var expected = -4;
+    calculator.subtract(4);
     assert.equal(expected, calculator.runningTotal);
   })
 
