@@ -108,6 +108,13 @@ describe('calculator', function () {
     assert.equal(expected, calculator.runningTotal);
   })
 
+  it('can accept and display two digits', function(){
+    var expected = 34;
+    calculator.numberClick(3);
+    calculator.numberClick(4);
+    assert.equal(expected, calculator.runningTotal);
+  })
+
 
 
 });
