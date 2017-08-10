@@ -1,37 +1,34 @@
 var Calculator = function(){
   this.previousOperator = null; // the last operator the user clicked
   this.previousTotal = 0;       // the total of the previous operation
-  this.newTotal = true;         // whether the previous operation has just been calculated
   this.runningTotal = 0;        // the current value to operate on the previous total
+  this.newTotal = true;         // whether the previous operation has just been calculated
 }
 
 Calculator.prototype = {
 
+  //adds number to the previousTotal, and stores this in runningTotal.
   add: function(number){
     this.runningTotal = parseFloat(this.previousTotal) + parseFloat(number);
-    this.previousTotal = this.runningTotal;
   },
 
+  //subtracts number from the previousTotal, and stores this in runningTotal
   subtract: function(number){
     this.runningTotal = parseFloat(this.previousTotal) - parseFloat(number);
-    this.previousTotal = this.runningTotal;
   },
 
   multiply: function(number){
     this.runningTotal = parseFloat(this.previousTotal) * parseFloat(number);
-    this.previousTotal = this.runningTotal;
   },
 
   divide: function(number){
     this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
-    this.previousTotal = this.runningTotal;
   },
 
   numberClick: function(number) {
 
-    // when a number is clicked, if a previous operation has just been completed,
-    // or there is a zero in the running total, clear the running total, and reset
-    // the `newTotal` flag
+    // if there is a zero in the running total OR a previous operation has just been completed,
+    // clear the running total and reset the `newTotal` flag
 
     if (this.runningTotal == 0 || this.newTotal) {
       this.runningTotal = '';
