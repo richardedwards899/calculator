@@ -49,7 +49,7 @@ You should write tests to ensure:
 - Do the number buttons work to update the display of the running total?
 - Do each of the arithmetical operations work to update the display with the result of the operation?
 - Can we chain multiple operations together?
-  - Does it work as expected for a range of numbers? (positive, negative, decimals, very large numbers)
+- Does it work as expected for a range of numbers? (positive, negative, decimals, very large numbers)
 
 What does the code do in exceptional circumstances?
 

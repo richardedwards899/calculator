@@ -127,4 +127,15 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('100000000');
   })
 
+  //test for dividing by zero
+  it('should calculate 1 / 0 to display error', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number1')).click();
+    element(by.css('#operator_divide')).click();
+    element(by.css('#number0')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('error');
+  })
+
+
 });
