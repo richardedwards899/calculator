@@ -84,7 +84,7 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('5');
   })
 
-  // tests with negative numbers
+  // test with negative numbers
   it('should calculate 2 - 6 * 2 to display -8', function(){
     running_total = element(by.css('#running_total'))
     element(by.css('#number2')).click();
@@ -97,9 +97,34 @@ describe('calculator functionality', function() {
   })
 
   // test with decimals
-
+  it('should calculate 3 / 2 to display 1.5', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number3')).click();
+    element(by.css('#operator_divide')).click();
+    element(by.css('#number2')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('1.5');
+  })
 
   // test with very large numbers
+  it('should calculate 10000 * 10000 to display 100000000', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number1')).click();
+    element(by.css('#number0')).click();
+    element(by.css('#number0')).click();
+    element(by.css('#number0')).click();
+    element(by.css('#number0')).click();
 
+    element(by.css('#operator_multiply')).click();
+
+    element(by.css('#number1')).click();
+    element(by.css('#number0')).click();
+    element(by.css('#number0')).click();
+    element(by.css('#number0')).click();
+    element(by.css('#number0')).click();
+
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('100000000');
+  })
 
 });
